@@ -105,7 +105,7 @@ const Hotels = () => {
   };
 
   return (
-    <div className="container ">
+    <div className=" ">
       <div className="lg:flex items-center justify-center gap-4 pt-5 ">
         {/* ======= location ==== */}
         <div className="mb-4 lg:mb-0">
@@ -180,8 +180,8 @@ const Hotels = () => {
               <div className="max-w-[1000px]  mx-auto border p-5 rounded-md mb-5 shadow-lg">
                 <div className="grid grid-cols-12 items-center gap-5 ">
                   {/* ====== left item ====== */}
-                  <div className="col-span-9 flex items-center gap-4 ">
-                    <div className=" relative w-[150px]">
+                  <div className="md:col-span-9 col-span-12 sm:flex items-center gap-4 ">
+                    <div className=" relative w-[150px] mb-4 sm:mb-0">
                       <Image
                         src={"/hotel.png"}
                         height={130}
@@ -239,27 +239,50 @@ const Hotels = () => {
                     </div>
                   </div>
                   {/* ======= right item ======= */}
-                  <div className="col-span-3">
+                  <div className="md:col-span-3 col-span-12">
                     <div className="">
-                      <div className="flex justify-end">
+                      <div className="flex md:justify-end">
                         <p className="select-none text-xs text-white font-medium text-center w-16 bg-orange-600 rounded-full py-1">
                           {hotel.discount} Off
                         </p>
                       </div>
 
-                      <div className="text-end py-4">
+                      <div className="md:text-end py-4">
                         <p className="text-lg font-bold">
                           {hotel.price} {hotel.currency}
                         </p>
                         <p className="text-xs ">For 1 night, Per room</p>
                       </div>
 
-                      <div className="flex justify-end">
+                      <div className="flex md:justify-end">
                         <p className=" select-none text-xs text-white font-medium text-center w-20 bg-green-500 rounded-full py-1">
                           {hotel.status}
                         </p>
                       </div>
                     </div>
+
+                    {/* <div className="md:hidden block">
+                      <div className=" flex items-center gap-4 flex-wrap">
+                        <div className="flex md:justify-end">
+                          <p className="select-none text-xs text-white font-medium text-center w-16 bg-orange-600 rounded-full py-1">
+                            {hotel.discount} Off
+                          </p>
+                        </div>
+
+                        <div className="md:text-end py-4">
+                          <p className="text-lg font-bold">
+                            {hotel.price} {hotel.currency}
+                          </p>
+                          <p className="text-xs ">For 1 night, Per room</p>
+                        </div>
+
+                        <div className="flex md:justify-end">
+                          <p className=" select-none text-xs text-white font-medium text-center w-20 bg-green-500 rounded-full py-1">
+                            {hotel.status}
+                          </p>
+                        </div>
+                      </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

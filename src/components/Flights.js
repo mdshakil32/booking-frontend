@@ -92,7 +92,7 @@ const Flights = () => {
   };
 
   return (
-    <div className="container">
+    <div className="">
       <div className="flex items-center justify-center gap-5 pt-10 ">
         <div>
           <input
