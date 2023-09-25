@@ -208,7 +208,7 @@ const Flights = () => {
               <div className="max-w-[1000px] mx-auto border rounded-md  mb-5 shadow-lg">
                 <div className="grid grid-cols-12 items-center gap-5">
                   {/* ======== destination details ======= */}
-                  <div className="col-span-9  p-5 flex items-center gap-4 h-full">
+                  <div className="sm:col-span-9 col-span-12  p-5 sm:flex items-center gap-4 h-full">
                     {/* ==== airline name &image ===== */}
                     <div className="w-[160px]">
                       <img src="/biman.png" alt="biman" className="w-[150px]" />
@@ -217,8 +217,8 @@ const Flights = () => {
                       </h1>
                     </div>
 
-                    <div className="">
-                      <div className=" flex items-center gap-6">
+                    <div className="mt-4 sm:mt-0">
+                      <div className=" lg:flex items-center gap-6">
                         {/* ====== departure ====== */}
                         <div>
                           <p className="text-xs font-medium">
@@ -233,16 +233,24 @@ const Flights = () => {
                         </div>
 
                         {/* ===== duration and stop count ====== */}
-                        <div>
-                          <p className="text-xs font-medium text-center">
-                            {trip.stopage}
+                        <div className="border-y my-3 py-3 lg:hidden block ">
+                          <p className=" text-xs font-medium ">
+                            {trip.stopage} - {trip.duration}H
                           </p>
-                          <div className="py-2">
-                            <hr />
+                        </div>
+
+                        <div className="lg:block hidden">
+                          <div className="">
+                            <p className="text-xs font-medium text-center">
+                              {trip.stopage}
+                            </p>
+                            <div className="py-2">
+                              <hr className=" " />
+                            </div>
+                            <p className="text-xs font-medium text-center">
+                              {trip.duration}H
+                            </p>
                           </div>
-                          <p className="text-xs font-medium text-center">
-                            {trip.duration}H
-                          </p>
                         </div>
 
                         {/* ====== arrival ======== */}
@@ -270,21 +278,21 @@ const Flights = () => {
                     </div>
                   </div>
                   {/* ======= price ======= */}
-                  <div className="col-span-3 bg-blue-50 p-5 h-full">
-                    <div>
-                      <p className="text-lg font-bold text-blue-900 text-end">
+                  <div className="sm:col-span-3 col-span-12 bg-blue-50 p-5 h-full flex items-center">
+                    <div className="w-full">
+                      <p className="text-lg font-bold text-blue-900 sm:text-end">
                         {trip.price}{" "}
                         <span className="text-sm">{trip.currency}</span>
                       </p>
 
-                      <p className="capitalize text-sm font-semibold text-end py-1">
+                      <p className="capitalize text-sm font-semibold sm:text-end py-1">
                         {trip.classType}
                       </p>
-                      <p className="capitalize text-sm font-semibold text-end py-1">
+                      <p className="capitalize text-sm font-semibold sm:text-end py-1">
                         {trip.tripWay == "onewaytrip" ? "One Way" : "Round Way"}
                       </p>
 
-                      <button className="group text-blue-800 font-semibold  bg-yellow-400 py-1 w-full rounded-md">
+                      <button className="group text-blue-800 font-semibold mt-2 bg-yellow-400 py-1 w-full rounded-md">
                         <span className="group-hover:pl-2 duration-200">
                           Select &rarr;
                         </span>
