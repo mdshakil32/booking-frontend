@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+}
+
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}
+
+.react-datepicker-wrapper input {
+  font-weight: 600;
+  outline: none;
+
+  width: 100%;
+}
+
+/* =============== skeleton =========== */
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1.5s linear infinite alternate;
+}
+.skeleton-inner {
+  opacity: 0.7;
+  animation: skeleton-loading-inner 0.8s linear infinite alternate;
+}
+
+.skeleton-border {
+  opacity: 0.7;
+  animation: skeleton-border-loading 2s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #ededed;
+  }
+
+  100% {
+    background-color: #b6b6b6b5;
+  }
+}
+
+@keyframes skeleton-loading-inner {
+  0% {
+    background-color: #f9f9f9;
+  }
+
+  100% {
+    background-color: #d9d9d9;
+  }
+}
+
+@keyframes skeleton-border-loading {
+  0% {
+    border-color: #252525;
+  }
+
+  100% {
+    border-color: #1b1b1bb6;
+  }
+}
