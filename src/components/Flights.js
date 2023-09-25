@@ -47,7 +47,6 @@ const Flights = () => {
 
   const handleSearch = async (selectedPage) => {
     if (selectedArrival !== null && selectedDeparture !== null) {
-      setCurrentPage(selectedPage);
       setIsLoading(true);
       const apiRoute = `https://booking-n129.onrender.com/flights?page=${selectedPage}&limit=10&currency=${currency}&departureCity=${selectedDeparture.code}&arrivalCity=${selectedArrival.code}&journeyDate=${journeyDate}&returnDate=${returnDate}&childs=${childs}&adults=${adults}&classType=${classType}&tripWay=${tripWay}`;
       const req = await fetch(apiRoute);
@@ -73,13 +72,14 @@ const Flights = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const offset = 10;
+  // const totalPages = Math.ceil(allMarketData.length / offset);
   const totalPages = Math.ceil(totalItems / offset);
+
   const visiblePages = 3;
 
   // Calculate range of visible page numbers
   const rangeStart = Math.max(currentPage - Math.floor(visiblePages / 2), 1);
   const rangeEnd = Math.min(rangeStart + visiblePages - 1, totalPages);
-
   // Generate page numbers to display
   const pages = [];
   for (let i = rangeStart; i <= rangeEnd; i++) {
@@ -318,6 +318,7 @@ const Flights = () => {
       )}
 
       {/* ========= pagination ==========  */}
+
       {results.length > 0 && (
         <div className="max-w-[1000px]  mx-auto pagination flex items-center justify-center">
           <div className="flex items-center gap-2 my-3">
