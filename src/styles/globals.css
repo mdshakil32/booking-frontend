@@ -15,6 +15,21 @@ body {
 
   width: 100%;
 }
+.custom-bg {
+  background: url("/banner.png");
+  height: 400px;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto; /* Center horizontally */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%); /* Center both horizontally and vertically */
+  z-index: -1;
+  border-radius: 20px;
+}
 
 /* =============== skeleton =========== */
 .skeleton {

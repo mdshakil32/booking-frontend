@@ -58,7 +58,7 @@ const HotelPassengers = ({
       <div
         key="departure-section"
         ref={dropdownRef}
-        className="border rounded-xl p-2.5 relative min-h-[78px] w-full min-w-[180px]"
+        className="border rounded-xl p-2.5 relative min-h-[78px] w-full min-w-[180px] bg-white"
       >
         <div
           onClick={() => setDropdown(!dropdown)}

@@ -51,7 +51,7 @@ const DepartureAirport = ({ setSelectedDeparture }) => {
       <div
         key="departure-section"
         ref={dropdownRef}
-        className="border rounded-xl p-2.5 relative"
+        className="border rounded-xl p-2.5 relative bg-white"
       >
         <div
           onClick={() => setDropdown(!dropdown)}

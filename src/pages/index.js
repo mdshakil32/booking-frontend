@@ -25,7 +25,8 @@ const Home = () => {
   };
 
   return (
-    <div className="">
+    <div className="relative min-h-screen">
+      <div className="custom-bg"></div>
       <ToastContainer
         position="bottom-left"
         closeOnClick
@@ -37,7 +38,7 @@ const Home = () => {
       />
       <div className="container py-10">
         {/* ======= Heading ====== */}
-        <div className="shadow-lg max-w-[400px] w-full mx-auto px-10 flex items-center justify-center rounded-xl overflow-hidden">
+        <div className="bg-white shadow-lg max-w-[400px] w-full mx-auto px-10 flex items-center justify-center rounded-xl overflow-hidden">
           <div
             onClick={() => handleClick("flight")}
             className={`${

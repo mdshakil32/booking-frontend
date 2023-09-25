@@ -51,7 +51,7 @@ const HotelCities = ({ setSelectedCity }) => {
       <div
         key="departure-section"
         ref={dropdownRef}
-        className="border rounded-xl p-2.5 relative min-h-[78px]"
+        className="border rounded-xl p-2.5 relative min-h-[78px] bg-white"
       >
         <div
           onClick={() => setDropdown(!dropdown)}

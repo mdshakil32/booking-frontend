@@ -140,7 +140,7 @@ const Flights = () => {
         {/* ===== date and counts ====== */}
         <div className="xl:col-span-1 col-span-2 sm:flex items-center justify-center  gap-2">
           <div className="grid xs:grid-cols-2 grid-cols-1 xs:gap-1 gap-4">
-            <div className="border rounded-xl p-2.5 relative  w-full">
+            <div className="border rounded-xl p-2.5 relative  w-full bg-white">
               <p className="text-xs">Journey Date</p>
 
               <DatePicker
@@ -157,7 +157,7 @@ const Flights = () => {
               <p className="text-xs">{getOnlyDay(journeyDate)} </p>
             </div>
 
-            <div className="border rounded-xl p-2.5 relative  w-full ">
+            <div className="border rounded-xl p-2.5 relative  w-full bg-white">
               <p className="text-xs">Return Date</p>
 
               <DatePicker
@@ -192,7 +192,7 @@ const Flights = () => {
       <div className="pt-6 text-center">
         <button
           onClick={handleSearch}
-          className="bg-blue-500 hover:bg-transparent hover:text-blue-500 border border-blue-500 text-white px-6 py-2 rounded-md shadow-lg"
+          className="bg-yellow-400 hover:bg-white hover:text-yellow-400 border border-yellow-400 text-white px-6 py-2 rounded-md shadow-lg"
         >
           Search
         </button>
@@ -205,7 +205,7 @@ const Flights = () => {
         <div className="pt-5">
           {results.map((trip, index) => (
             <div key={index} className="">
-              <div className="max-w-[1000px] mx-auto border rounded-md  mb-5 shadow-lg">
+              <div className="max-w-[1000px] mx-auto border rounded-md  mb-5 shadow-lg bg-white">
                 <div className="grid grid-cols-12 items-center gap-5">
                   {/* ======== destination details ======= */}
                   <div className="sm:col-span-9 col-span-12  p-5 sm:flex items-center gap-4 h-full">

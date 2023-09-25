@@ -115,7 +115,7 @@ const Hotels = () => {
         {/* ====== date and count ====== */}
         <div className="sm:flex items-center justify-center gap-4">
           <div className="xs:flex items-center justify-center gap-1">
-            <div className="border rounded-xl p-2.5 relative w-full min-h-[78px] mb-4 xs:mb-0">
+            <div className="border rounded-xl p-2.5 relative w-full min-h-[78px] mb-4 xs:mb-0 bg-white">
               <p className="text-xs">Check In</p>
 
               <DatePicker
@@ -132,7 +132,7 @@ const Hotels = () => {
               <p className="text-xs">{getOnlyDay(checkIn)} </p>
             </div>
 
-            <div className="border rounded-xl p-2.5 relative w-full min-h-[78px] ">
+            <div className="border rounded-xl p-2.5 relative w-full min-h-[78px] bg-white">
               <p className="text-xs">Check Out</p>
 
               <DatePicker
@@ -164,7 +164,7 @@ const Hotels = () => {
       <div className="pt-6 text-center">
         <button
           onClick={() => handleSearch(1)}
-          className="bg-blue-500 hover:bg-transparent hover:text-blue-500 border border-blue-500 text-white px-6 py-2 rounded-md shadow-lg"
+          className="bg-yellow-400 hover:bg-white hover:text-yellow-400 border border-yellow-400 text-white px-6 py-2 rounded-md shadow-lg"
         >
           Search
         </button>
@@ -177,7 +177,7 @@ const Hotels = () => {
         <div className="pt-10">
           {results.map((hotel, index) => (
             <div key={index} className=" ">
-              <div className="max-w-[1000px]  mx-auto border p-5 rounded-md mb-5 shadow-lg">
+              <div className="max-w-[1000px]  mx-auto border p-5 rounded-md mb-5 shadow-lg bg-white">
                 <div className="grid grid-cols-12 items-center gap-5 ">
                   {/* ====== left item ====== */}
                   <div className="md:col-span-9 col-span-12 sm:flex items-center gap-4 ">
